@@ -52,8 +52,12 @@ body {
 	font-weight: 700;
 	font-size: 0.7em;
 	position: absolute;
-	top: 55%;
-	left: 25%;
+	top: 65%;
+	left: 30%;
+	/* width: 120px;
+	max-width: 50%; */
+	/* margin: 0 auto;
+	margin-top: -10px; */
 	cursor: pointer;
 }
 .add-to-cart img {
