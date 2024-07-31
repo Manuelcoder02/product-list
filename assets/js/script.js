@@ -1,5 +1,8 @@
 'use strict';
 const productList = document.querySelector('.product-list');
+const btnAddToCart = document.querySelector('.add-to-cart');
+const selectedCart = document.querySelector('.selected');
+const unSelectedCart = document.querySelector('.un-selected');
 const localJSON = async function () {
 	const res = await fetch('data.json');
 	const data = await res.json();
@@ -31,7 +34,9 @@ const localJSON = async function () {
 				mov.image.mobile
 			}" alt="${mov.name.toLowerCase()}" class="product-image" />
 			
-			<button class="add-to-cart"> <img src="./assets/images/icon-add-to-cart.svg" alt="empty cart" /> Add to cart </button>
+			<button class="add-to-cart"> <img src="./assets/images/icon-add-to-cart.svg" alt="empty cart" /> Add to cart 
+			
+			</button>
 			
 			<div class="product-details">
 				<h5 class="product__sub-name">${mov.category}</h5>
@@ -47,15 +52,10 @@ const localJSON = async function () {
 
 localJSON();
 
-let now = new Date();
-const date = String(now);
-console.log(typeof now);
-// const day = `${now.getDate()}`.padEnd(4, 1);
-// const day = now.padEnd(4, 1);
-const dd = now.getDate().toString();
-const ee = dd.padEnd(4, 1);
-console.log(ee);
-
-// let number = 10;
-// const str = String(number);
-// console.log(typeof str);
+console.log(btnAddToCart);
+btnAddToCart.addEventListener('click', function () {
+	btnAddToCart.classList.add('background-color');
+	btnAddToCart.style.border = 'none';
+	unSelectedCart.classList.add('hidden');
+	selectedCart.classList.remove('hidden');
+});
