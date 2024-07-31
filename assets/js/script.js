@@ -8,12 +8,21 @@ const localJSON = async function () {
 	// console.log(data[1].name.toLowerCase());
 
 	data.forEach((mov, i) => {
+		let price, priceStr, realPrice;
 		// console.log(mov, i);
 		// console.log(mov.name);
-		const price = mov.price;
-		const priceStr = price.toString();
-		const realPrice = priceStr.padEnd(3, 0);
+		price = mov.price;
+		priceStr = price.toString();
+		// realPrice = priceStr.padEnd(3, 0);
 		console.log(realPrice);
+
+		if (priceStr.includes('.')) {
+			realPrice = priceStr.padEnd(4, 0);
+			// console.log(priceStr.padEnd(4, 0));
+		} else {
+			realPrice = priceStr.padEnd(4, '.00');
+			// console.log(priceStr.padEnd(3, 0));
+		}
 		// const realPrice = price.padEnd(2, 0);
 		// console.log(realPrice);
 		const html = `
@@ -27,7 +36,7 @@ const localJSON = async function () {
 			<div class="product-details">
 				<h5 class="product__sub-name">${mov.category}</h5>
 				<h2 class="product__name">${mov.name}</h2>
-				<p class="product__price">$</p>
+				<p class="product__price">$${realPrice}</p>
 			</div>
 
 		</div>`;

@@ -72,6 +72,28 @@ body {
 	color: hsl(14, 86%, 42%);
 	font-weight: 500;
 }
+
+/* CART STYLING */
+.cart {
+	background-color: white;
+	padding: 1em;
+	border-radius: 10px;
+}
+.cart-title {
+	color: hsl(14, 86%, 42%);
+	font-size: 1.2em;
+}
+.cart-image {
+	display: flex;
+	justify-content: center;
+}
+.cart-description {
+	color: hsl(12, 20%, 44%);
+	font-size: 0.7em;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 1em;
+}
 /* ATTRIBUTION STYLING */
 .attribution {
 	font-size: 11px;
