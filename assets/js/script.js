@@ -1,9 +1,6 @@
 'use strict';
 const productList = document.querySelector('.product-list');
-const btnAddToCart = document.querySelector('.add-to-cart');
-const selectedCart = document.querySelector('.selected');
-const unSelectedCart = document.querySelector('.un-selected');
-const cartImage = document.querySelector('.product-image');
+
 const localJSON = async function () {
 	const res = await fetch('data.json');
 	const data = await res.json();
@@ -60,15 +57,20 @@ const localJSON = async function () {
 
 		productList.insertAdjacentHTML('beforeend', html);
 	});
+
+	const btnAddToCart = document.querySelector('.add-to-cart');
+	const selectedCart = document.querySelector('.selected');
+	const unSelectedCart = document.querySelector('.un-selected');
+	const cartImage = document.querySelector('.product-image');
+
+	console.log(btnAddToCart);
+	btnAddToCart.addEventListener('click', function () {
+		btnAddToCart.classList.add('background-color');
+		btnAddToCart.style.border = 'none';
+		unSelectedCart.classList.add('hidden');
+		selectedCart.classList.remove('hidden');
+		cartImage.style.border = '2px solid hsl(14, 86%, 42%)';
+	});
 };
 
 localJSON();
-
-console.log(btnAddToCart);
-btnAddToCart.addEventListener('click', function () {
-	btnAddToCart.classList.add('background-color');
-	btnAddToCart.style.border = 'none';
-	unSelectedCart.classList.add('hidden');
-	selectedCart.classList.remove('hidden');
-	cartImage.style.border = '2px solid hsl(14, 86%, 42%)';
-});
