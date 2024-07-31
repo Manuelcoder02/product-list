@@ -68,7 +68,7 @@ body {
 .increment {
 	border: 1px solid white;
 	border-radius: 50%;
-	padding: 0.05em;
+	padding: 0.1em;
 }
 .decrement {
 	border: 1px solid white;
