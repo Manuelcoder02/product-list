@@ -129,7 +129,6 @@ body {
 
 /* ORDER CONFIRMED STYLING */
 .order-confirmed {
-	border: 3px solid red;
 	margin: 1em 0;
 	background-color: #fff;
 	border-radius: 10px;
