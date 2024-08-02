@@ -74,6 +74,38 @@ const localJSON = async function () {
 	} catch (err) {
 		console.error(err);
 	}
+
+	// Confirmed Order
+
+	const htmlConfirm = `
+		<img src="./assets/images/icon-order-confirmed.svg" alt="a green success icon enveloped in a green circle" class="success-icon" />
+		<div class="confirmed-text">
+			<h1>Order Confirmed</h1>
+			<p class="greeting">We hope you enjoy your food!</p>
+		</div>
+		<div class="order-details">
+			<div class="orders">
+				<div class="order order__item__one">
+					<div class="img-thumbnail">
+						<img src="./assets/images/image-baklava-thumbnail.jpg" alt="" class="image-thumbnail" />
+					</div>
+					<div class="order-item">
+						<h5 class="order__title">Classic Tiramisu</h5>
+						<div class="order__item__info">
+							<p class="order__quantity">1x</p>
+							<p class="order__price">@ $5.50</p>
+						</div>
+					</div>
+					<p class="order__item-price">$5.50</p>
+				</div>
+			</div>
+			<div class="order__total__price">
+				<p class="order__price__text">Order Total</p>
+				<h1 class="total__price">$46.50</h1>
+			</div>
+		</div>
+		<button class="new__order">Start New Order</button>
+	`;
 };
 
 localJSON();
