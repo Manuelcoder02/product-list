@@ -211,6 +211,19 @@ body {
 	text-align: right;
 	font-size: 1.2em;
 }
+
+.new__order {
+	width: 100%;
+	padding: 0.8em 0;
+	margin: 1em 0;
+	background-color: hsl(14, 86%, 42%);
+	border: none;
+	color: #fff;
+	font-size: 1em;
+	border-radius: 50px;
+	font-weight: 600;
+	cursor: pointer;
+}
 /* STATE STYLING */
 .hidden {
 	display: none;
