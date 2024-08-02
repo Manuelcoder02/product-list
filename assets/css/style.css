@@ -135,6 +135,9 @@ body {
 	border-radius: 10px;
 	padding: 1em 0;
 }
+.confirmed-text h1 {
+	font-size: 1.5em;
+}
 
 /* STATE STYLING */
 .hidden {
