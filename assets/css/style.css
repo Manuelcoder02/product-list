@@ -154,11 +154,13 @@ body {
 	border-radius: 10px;
 	padding: 1.5em;
 }
-.order__item__one {
+.order {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+	padding-bottom: 0.7em;
+	border-bottom: 1px solid hsl(14, 25%, 72%);
 }
 .img-thumbnail {
 	width: 20%;
