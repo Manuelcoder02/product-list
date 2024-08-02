@@ -148,6 +148,51 @@ body {
 	color: hsl(12, 20%, 44%);
 	margin: 0.5em 0 1em 0;
 }
+
+.order-details {
+	background-color: hsl(13, 31%, 94%);
+	border-radius: 10px;
+	padding: 1.5em;
+}
+.order__item__one {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.img-thumbnail {
+	width: 20%;
+}
+.image-thumbnail {
+	border-radius: 10px;
+}
+.order-item {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.order__title {
+	font-size: 0.8em;
+	color: hsl(14, 65%, 9%);
+	padding-bottom: 0.3em;
+}
+.order__item__info {
+	display: flex;
+	gap: 1em;
+}
+.order__quantity {
+	font-size: 0.9em;
+	color: hsl(14, 86%, 42%);
+	font-weight: 900;
+}
+.order__price {
+	color: hsl(12, 20%, 44%);
+	font-size: 0.9em;
+}
+.order__item-price {
+	font-weight: 700;
+	color: hsl(14, 65%, 9%);
+}
 /* STATE STYLING */
 .hidden {
 	display: none;
