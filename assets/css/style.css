@@ -135,10 +135,18 @@ body {
 	border-radius: 10px;
 	padding: 1em 0;
 }
+.confirmed-text {
+	width: 70%;
+}
 .confirmed-text h1 {
 	font-size: 2em;
+	line-height: 1em;
 }
-
+.greeting {
+	font-size: 0.8em;
+	color: hsl(12, 20%, 44%);
+	margin: 0.5em 0 1em 0;
+}
 /* STATE STYLING */
 .hidden {
 	display: none;
