@@ -194,6 +194,12 @@ body {
 .order__item-price {
 	font-weight: 700;
 	color: hsl(14, 65%, 9%);
+	text-align: right;
+}
+
+.order__total__price {
+	border: 1px solid blue;
+	padding: 1em 0;
 }
 /* STATE STYLING */
 .hidden {
