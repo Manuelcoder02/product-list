@@ -2,31 +2,31 @@
 const productList = document.querySelector('.product-list');
 
 const localJSON = async function () {
-	const res = await fetch('data.json');
-	const data = await res.json();
-	console.log(data);
-	// const str = data[1].name.toLowerCase();
-	// console.log(data[1].name.toLowerCase());
+	try {
+		const res = await fetch('data.json');
+		const data = await res.json();
+		// console.log(data);
+		// const str = data[1].name.toLowerCase();
+		// console.log(data[1].name.toLowerCase());
 
-	data.forEach((mov, i) => {
-		let price, priceStr, realPrice;
-		// console.log(mov, i);
-		// console.log(mov.name);
-		price = mov.price;
-		priceStr = price.toString();
-		// realPrice = priceStr.padEnd(3, 0);
-		console.log(realPrice);
+		data.forEach((mov, i) => {
+			let price, priceStr, realPrice;
+			// console.log(mov, i);
+			// console.log(mov.name);
+			price = mov.price;
+			priceStr = price.toString();
+			// realPrice = priceStr.padEnd(3, 0);
 
-		if (priceStr.includes('.')) {
-			realPrice = priceStr.padEnd(4, 0);
-			// console.log(priceStr.padEnd(4, 0));
-		} else {
-			realPrice = priceStr.padEnd(4, '.00');
-			// console.log(priceStr.padEnd(3, 0));
-		}
-		// const realPrice = price.padEnd(2, 0);
-		// console.log(realPrice);
-		const html = `
+			if (priceStr.includes('.')) {
+				realPrice = priceStr.padEnd(4, 0);
+				// console.log(priceStr.padEnd(4, 0));
+			} else {
+				realPrice = priceStr.padEnd(4, '.00');
+				// console.log(priceStr.padEnd(3, 0));
+			}
+			// const realPrice = price.padEnd(2, 0);
+			// console.log(realPrice);
+			const html = `
 		<div class="products product-${i + 1}">
 			<img src="${
 				mov.image.mobile
@@ -55,22 +55,25 @@ const localJSON = async function () {
 
 		</div>`;
 
-		productList.insertAdjacentHTML('beforeend', html);
-	});
+			productList.insertAdjacentHTML('beforeend', html);
 
-	const btnAddToCart = document.querySelector('.add-to-cart');
-	const selectedCart = document.querySelector('.selected');
-	const unSelectedCart = document.querySelector('.un-selected');
-	const cartImage = document.querySelector('.product-image');
+			const btnAddToCart = document.querySelector('.add-to-cart');
+			const selectedCart = document.querySelector('.selected');
+			const unSelectedCart = document.querySelector('.un-selected');
+			const cartImage = document.querySelector('.product-image');
 
-	console.log(btnAddToCart);
-	btnAddToCart.addEventListener('click', function () {
-		btnAddToCart.classList.add('background-color');
-		btnAddToCart.style.border = 'none';
-		unSelectedCart.classList.add('hidden');
-		selectedCart.classList.remove('hidden');
-		cartImage.style.border = '2px solid hsl(14, 86%, 42%)';
-	});
+			console.log(btnAddToCart);
+			btnAddToCart.addEventListener('click', function () {
+				btnAddToCart.classList.add('background-color');
+				btnAddToCart.style.border = 'none';
+				unSelectedCart.classList.add('hidden');
+				selectedCart.classList.remove('hidden');
+				cartImage.style.border = '2px solid hsl(14, 86%, 42%)';
+			});
+		});
+	} catch (err) {
+		console.error(err);
+	}
 };
 
 localJSON();
