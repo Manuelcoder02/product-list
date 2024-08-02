@@ -127,6 +127,15 @@ body {
 	margin-top: 1em;
 }
 
+/* ORDER CONFIRMED STYLING */
+.order-confirmed {
+	border: 3px solid red;
+	margin: 1em 0;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 1em 0;
+}
+
 /* STATE STYLING */
 .hidden {
 	display: none;
