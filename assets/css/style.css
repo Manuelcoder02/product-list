@@ -136,14 +136,15 @@ body {
 	padding: 1em 0;
 }
 .confirmed-text {
-	width: 70%;
+	width: 80%;
+	margin: 1em 0;
 }
 .confirmed-text h1 {
-	font-size: 2em;
+	font-size: 2.5em;
 	line-height: 1em;
 }
 .greeting {
-	font-size: 0.8em;
+	font-size: 1em;
 	color: hsl(12, 20%, 44%);
 	margin: 0.5em 0 1em 0;
 }
