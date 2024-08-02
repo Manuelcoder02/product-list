@@ -196,10 +196,9 @@ body {
 	color: hsl(14, 65%, 9%);
 	text-align: right;
 }
-
 .order__total__price {
 	border: 1px solid blue;
-	padding: 1em 0;
+	padding-top: 1em;
 }
 /* STATE STYLING */
 .hidden {
