@@ -26,9 +26,7 @@ const localJSON = async function () {
 			}
 			// const realPrice = price.padEnd(2, 0);
 			// console.log(realPrice);
-			const html = `
-		<div class="products product-${i + 1}">
-			<img src="${
+			const html = ` <div class="products product-${i + 1}"> <img src="${
 				mov.image.mobile
 			}" alt="${mov.name.toLowerCase()}" class="product-image" />
 			
@@ -53,28 +51,33 @@ const localJSON = async function () {
 				<p class="product__price">$${realPrice}</p>
 			</div>
 
-		</div>`;
+			</div>`;
 
 			productList.insertAdjacentHTML('beforeend', html);
-
-			const btnAddToCart = document.querySelectorAll('.add-to-cart');
-			const selectedCart = document.querySelector('.selected');
-			const unSelectedCart = document.querySelector('.un-selected');
-			const cartImage = document.querySelector('.product-image');
-
-			// const [...arr] = btnAddToCart;
-			console.log(btnAddToCart);
-
-			// console.log(btnAddToCart);
-
-			// btnAddToCart.addEventListener('click', function () {
-			// 	btnAddToCart.classList.add('background-color');
-			// 	btnAddToCart.style.border = 'none';
-			// 	unSelectedCart.classList.add('hidden');
-			// 	selectedCart.classList.remove('hidden');
-			// 	cartImage.style.border = '2px solid hsl(14, 86%, 42%)';
-			// });
 		});
+		const [...btnAddToCart] = document.querySelectorAll('.add-to-cart');
+		const selectedCart = document.querySelector('.selected');
+		const unSelectedCart = document.querySelector('.un-selected');
+		const cartImage = document.querySelector('.product-image');
+
+		console.log(btnAddToCart);
+		btnAddToCart.forEach((add, i) => {
+			add.addEventListener('click', function () {
+				add.classList.add('background-color');
+				add.style.border = 'none';
+				unSelectedCart.classList.add('hidden');
+				selectedCart.classList.remove('hidden');
+				cartImage.style.border = '2px solid hsl(14, 86%, 42%)';
+			});
+			console.log(add, i);
+		});
+		// btnAddToCart.addEventListener('click', function () {
+		// 	btnAddToCart.classList.add('background-color');
+		// 	btnAddToCart.style.border = 'none';
+		// 	unSelectedCart.classList.add('hidden');
+		// 	selectedCart.classList.remove('hidden');
+		// 	cartImage.style.border = '2px solid hsl(14, 86%, 42%)';
+		// });
 	} catch (err) {
 		console.error(err.message);
 	}
